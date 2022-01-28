@@ -83,7 +83,7 @@ contract Decentralease {
         require(msg.sender == owner,"ONLY OWNER");
         ERC20 randoERC20 = ERC20(_token);
         uint256 balance = randoERC20.balanceOf(address(this));
-        randoERC20.transfer(address(this), balance);
+        randoERC20.transfer(owner, balance);
     }
 }
 
